@@ -24,7 +24,7 @@ class Animal(models.Model):
     )
     description = models.CharField(
             max_length=200,
-            validators=[MinLengthValidator(0, "Desciptions can be optional")]
+            validators=[MinLengthValidator(0, "Descriptions can be optional")]
     )
         breed = models.ForeignKey('Breed', on_delete=models.CASCADE, null=False)
     info = models.ForeignKey('Breed', on_delete=models.CASCADE, null=False)
